@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aquamarine;
+}
+
+/* ---------- TOP NAV ---------- */
+.topnav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #333;
+  padding: 0 12px;
+  height: 64px;
+  position: relative;
+}
+
+.topnav .top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+  padding: 6px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+
+.topnav .menu-links {
+  display: flex;
+  margin-left: auto; 
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column; /* will switch to row on desktop */
+  transition: max-height 0.5s ease-out;
+}
+
+.topnav.responsive .menu-links {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Base style for desktop buttons */
+.topnav .menu-links a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 0 12px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+  border-radius: 10px; /* base radius so it doesn’t snap */
+}
+
+/* Hover style */
+.topnav .menu-links a:hover {
+  background-color: #ddd;
+  color: black;
+  /* optional: slightly bigger radius for effect */
+  border-radius: 12px;
+}
+
+
+.menu-links{
+    border-radius: 10px;
+}
+
+/* ---------- HAMBURGER ICON ---------- */
+.topnav .icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* ---------- MOBILE STYLING ---------- */
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .topnav .top-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .topnav a.active {
+    margin-left: 10px;
+  }
+
+  .topnav .icon {
+    display: block;
+    margin-right: 10px;
+    text-decoration: none; 
+  }
+
+  .topnav .menu-links {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .topnav.responsive .menu-links {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .topnav.responsive .icon {
+    transform: rotate(90deg); /* rotates icon in sync */
+  }
+
+  .topnav .menu-links a {
+    padding: 10px 16px;
+    height: auto;
+  }
+}
+
+/* ---------- DESKTOP LAYOUT ---------- */
+@media screen and (min-width: 601px) {
+  .topnav .menu-links {
+    flex-direction: row;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+}
