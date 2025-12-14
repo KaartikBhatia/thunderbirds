@@ -23,7 +23,6 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
   color: white;
   padding: 6px 14px;
   text-decoration: none;
@@ -31,6 +30,7 @@ body {
   font-size: 16px;
   border-radius: 4px;
   flex: 0 0 auto;
+  cursor: pointer;
 }
 
 .topnav .menu-links {
@@ -144,4 +144,9 @@ body {
   .topnav .icon {
     display: none;
   }
+}
+
+.crestbird{
+    height: 75px;
+    width: 75px;
 }
