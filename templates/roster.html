@@ -9,9 +9,9 @@
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
+    <div class="topnav" id="myTopnav">
     <div class="top-row">
-      <a href="index.html" class="active"><img src = "{{ url_for('static', filename='logo.png') }}" class = "crestbird"></a></a>
+      <a href="index.html" class="active"><img src = "{{ url_for('static', filename='logo.png') }}" class = "crestbird"></a>
       <a class="icon" onclick="toggleMenu()">☰</a>
     </div>
     <div class="menu-links">
@@ -20,10 +20,12 @@
       <a href="#about">About</a>
       <a href="roster.html">Record Sheet</a>
     </div>
-    <div class="welcome-text">
-      <h1 style="font-size: xx-large;">North Springs Thunderbirds FC</h1>
-      <p>Welcome to the official website of The North Springs Thunderbirds FC. We are a football club based in Sandy Springs, GA. Feel free to explore the website, or contact coach Raul for more information!</h3>
-    </div>
-  </div>
+</div>
+<div class="iframe-container">
+    <iframe
+        src="https://docs.google.com/spreadsheets/d/16qt3Q4HojG97-YKNIo7UIsVpOshItsIKlVrblxf6-MU/edit?pli=1&gid=0#gid=0">
+    </iframe>
+</div>
+
 </body>
 </html>
