@@ -11,14 +11,14 @@
 <body>
   <div class="topnav" id="myTopnav">
     <div class="top-row">
-      <a href="index.html" class="active"><img src = "{{ url_for('static', filename='logo.png') }}" class = "crestbird"></a></a>
+      <a href="{{ url_for('welcome') }}" class="active"><img src = "{{ url_for('static', filename='logo.png') }}" class = "crestbird"></a></a>
       <a class="icon" onclick="toggleMenu()">☰</a>
     </div>
     <div class="menu-links">
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
-      <a href="roster.html">Record Sheet</a>
+      <a href="{{ url_for('roster') }}">Record Sheet</a>
     </div>
     <div class="welcome-text">
       <h1 style="font-size: xx-large;">North Springs Thunderbirds FC</h1>
