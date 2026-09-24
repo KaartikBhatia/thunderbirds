@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,10 @@
   <script defer src="{{ url_for('static', filename='script.js') }}"></script>
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo.png') }}">
 </head>
+
+
 <body>
-    <div class="topnav" id="myTopnav">
+ <div class="topnav" id="myTopnav">
     <div class="top-row">
       <a href="{{ url_for('welcome') }}" class="active"><img src = "{{ url_for('static', filename='logo.png') }}" class = "crestbird"></a>
       <a class="icon" onclick="toggleMenu()">☰</a>
@@ -21,10 +23,13 @@
       <a href="{{ url_for('roster') }}">Record Sheet</a>
     </div>
 </div>
-<div class="iframe-container">
-    <iframe
-        src="https://docs.google.com/spreadsheets/d/16qt3Q4HojG97-YKNIo7UIsVpOshItsIKlVrblxf6-MU/edit?pli=1&gid=0#gid=0">
-    </iframe>
+
+<div class="welcome-text">
+    <h1 style="font-size: xx-large;">The story of 4 stones...</h1>
+</div>
+
+<div class="abtcoach">
+    <h1 style="font-size: xx-large; text-align: center; color: whitesmoke;">Meet Coach Raul!</h1>
 </div>
 
 </body>
